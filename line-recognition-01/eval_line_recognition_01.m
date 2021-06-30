@@ -2,6 +2,8 @@ addpath('../../neural-network');
 
 load('line-recognition-01.mat');
 
+printf('Cost : %f\n', J);
+
 X = [[1 0 0 1 0 0 0 0 0]; % vertical (upper left)
 [0 1 0 0 1 0 0 0 0]; % vertical (upper center)
 [0 0 1 0 0 1 0 0 0]; % vertical (upper right)
@@ -17,13 +19,4 @@ X = [[1 0 0 1 0 0 0 0 0]; % vertical (upper left)
 y = [[1 0]; [1 0]; [1 0]; [1 0]; [1 0]; % vertical
 [0 1]; [0 1]; [0 1]; [0 1]; [0 1]]; % horizontal
 
-p = zeros(size(X, 1), 1);
-
-for mi = 1:10
-    prediction = predict(X(mi, :)', cellW);
-    if prediction(1) == y(mi, 1) && prediction(2) == y(mi, 2)
-      p(mi, :) = 1;
-    end;
-end
-
-fprintf('\nTraining Set Accuracy: %f\n', mean(double(p)) * 100);
+evaluation(X, cellW, y);
