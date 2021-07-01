@@ -1,4 +1,4 @@
-addpath('../../neural-network');
+addpath('../../neural-network-octave');
 
 load('odd-even.mat');
 

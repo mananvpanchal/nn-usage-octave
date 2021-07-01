@@ -1,5 +1,5 @@
 
-addpath('../../neural-network');
+addpath('../../neural-network-octave');
 
 X = [[0 0 0 0];
 [0 0 0 1];

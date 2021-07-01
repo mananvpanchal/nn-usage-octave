@@ -1,4 +1,4 @@
-addpath('../../neural-network');
+addpath('../../neural-network-octave');
 
 load('line-recognition-01.mat');
 
