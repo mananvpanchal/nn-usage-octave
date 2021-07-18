@@ -19,4 +19,6 @@ X = [[1 0 0 1 0 0 0 0 0]; % vertical (upper left)
 y = [[1 0]; [1 0]; [1 0]; [1 0]; [1 0]; % vertical
 [0 1]; [0 1]; [0 1]; [0 1]; [0 1]]; % horizontal
 
-evaluation(X, cellW, y);
+pred = evaluation(X, cellW, y);
+
+printf('\nTraining Set Accuracy: %f\n', pred);

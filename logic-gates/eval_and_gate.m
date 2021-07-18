@@ -7,7 +7,8 @@ printf('Cost : %f\n', J);
 X = [0 0; 0 1; 1 0; 1 1];
 y = [0; 0; 0; 1];
 
-evaluation(X, cellW, y);
+pred = evaluation(X, cellW, y);
+printf('\nTraining Set Accuracy: %f\n', pred);
 
 % prediction = predict([0 0]', cellW);
 % prediction
