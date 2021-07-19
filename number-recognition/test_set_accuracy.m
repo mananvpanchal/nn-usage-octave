@@ -1,4 +1,4 @@
-addpath('../neural-network-octave');
+addpath('../../neural-network-octave');
 
 load('test-set.mat');
 load('number-recognition-03-lambda.mat');

@@ -1,3 +1,4 @@
+% ------------ use the code to separate all data into training set and test set ------------
 load('data.mat');
 
 testCount = 100;
