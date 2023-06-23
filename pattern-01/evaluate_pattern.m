@@ -1,6 +1,6 @@
 addpath('../../neural-network-octave');
 
-load('pattern-01-lambda.mat');
+load('pattern-02.mat');
 
 printf('Cost : %f\n', J);
 

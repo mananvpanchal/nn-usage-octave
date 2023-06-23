@@ -1,16 +1,28 @@
 addpath('../../neural-network-octave');
 
-load('data.mat');
-load('number-recognition-02-lambda.mat');
+load('test-set.mat');
+load('number-recognition-03-lambda.mat');
 
-y_bits = (1 : 10) == y;
+%size(X)
+y_bits = (1 : 10) == y_test;
 
-idx = floor(5000 * rand(1));
+idx = floor(100 * rand(1));
+%idx = 50;
 
-printf('Real value %d\n', y(idx, :));
+idx
 
-prediction = predict(X(idx, :)', cellW);
+realValue = y_test(idx, :);
+if(realValue == 10)
+  realValue = 0;
+end
+printf('Real value %d\n', realValue);
+
+%size(X(idx, :))
+prediction = predict(X_test(idx, :)', cellW, @displayData);
 
 [val, idx] = max(prediction);
 
-printf('prediction %d\n', idx);
+if(idx == 10)
+  idx = 0;
+end
+printf('Prediction %d\n', idx);

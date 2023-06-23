@@ -16,6 +16,8 @@ X = [[1 0 0 1 0 0 0 0 0]; % vertical (upper left)
 [0 0 0 0 1 1 0 0 0] % horizontal (center right)
 ];
 
+displayData(X);
+
 y = [[1 0]; [1 0]; [1 0]; [1 0]; [1 0]; % vertical
 [0 1]; [0 1]; [0 1]; [0 1]; [0 1]]; % horizontal
 

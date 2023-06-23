@@ -19,8 +19,8 @@ y = [[1 0]; [1 0]; [1 0]; [1 0]; [1 0]; % vertical
 
 cellW = randomWeights(X, [12; 4], y);
 
-[ J, cellW ] = neuralNetwork(X, cellW, y, 700, 2.8);
+[ J, cellW ] = neuralNetwork(X, cellW, y, 2, 2.8);
 
-save('line-recognition-01.mat', 'cellW', 'J');
+save('line-recognition-02.mat', 'cellW', 'J');
 
 printf('Trained!!!\n');

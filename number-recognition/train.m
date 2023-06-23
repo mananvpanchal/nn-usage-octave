@@ -13,12 +13,12 @@ y_bits_test = (1 : 10) == y_test;
 %load('number-recognition-03-lambda.mat');
 %printf('parameters loaded');
 % ------------- enable above code and disable below to use trained weight for further training -------------
-cellW = randomWeights(X_train, [25], y_bits_train);
+cellW = randomWeights(X_train, [144, 36], y_bits_train);
 % -------------------------------------------------------
 
-[ J, cellW ] = neuralNetwork(X_train, cellW, y_bits_train, 50, 1.5, 0.5);
+[ J, cellW ] = neuralNetwork(X_train, cellW, y_bits_train, 5, 0.9);
 
-save('number-recognition-03-lambda.mat', 'cellW', 'J');
+save('number-recognition-144-36-lambda.mat', 'cellW', 'J');
 
 printf('Trained!!!\n');
 % --------------------------------------------------
